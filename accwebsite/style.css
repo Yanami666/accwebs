@@ -1,0 +1,110 @@
+body{
+    background-image:url(./image/backgroundpic.png) ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;   
+}
+.center-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+}
+
+.grid-layout{
+    display: grid;
+    grid-template-columns: 150px 150px 150px 150px 150px 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px 150px;
+    
+    grid-template-areas:
+    "a1 a1 b1 b1 b1 b1 b2 b2"
+    "a2 a2 b1 b1 b1 b1 b2 b2"
+    "a2 a2 b1 b1 b1 b1 b2 b2"
+    "a2 a2 c1 c1 c1 c1 b2 b2";
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.visible{
+    opacity: 1;
+    transform: translateY(0);
+}
+.sec-a1{
+    background-image: url(./image/backgroundpic55.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-area: a1;
+    padding: 5px;
+    margin: 10px;
+}
+.sec-a2{
+    background-image: url(./image/backgroundpic11.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-area: a2;
+    padding: 5px;
+    margin: 10px;
+
+}
+.sec-b1{
+    background-image: url(./image/backgroundpic44.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-area: b1;
+    padding: 5px;
+    margin: 10px;
+}
+.sec-b2{
+    background-image: url(./image/backgroundpic22.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-area: b2;
+    padding: 5px;
+    margin: 10px;
+}
+.sec-c1{
+    background-image: url(./image/backgroundpic44.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-area: c1;
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin: 20px 0;
+    animation: bounce 2s ease-in-out infinite alternate;
+}
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.back-page{
+    text-align: center;
+}
+
+.p5arrange {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}

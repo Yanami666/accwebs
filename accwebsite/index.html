@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <h1> Ella Guo</h1>
+    <div class="center-con">
+    <div class="grid-layout">
+
+        <div class="sec-a1">
+        <h2>-୨୧ Contact ୨୧-</h2>
+        <p> Email: guoe202@newschool.edu<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            m13241787330@163.com
+        </p>
+        </div>
+
+        <div class="sec-a2">
+        <h2>-୨୧ About Me ୨୧-</h2>
+        <p>
+        &nbsp;<b>✰Yanhui Guo</b><br>
+        &nbsp;✰She/her<br>
+        &nbsp;✰Parsons School of Design 27'<br>
+        &nbsp;✰Hobbies && Interests<br>
+        &nbsp;&nbsp;&nbsp;Nail art<br>
+        &nbsp;&nbsp;&nbsp;Knitting<br>
+        &nbsp;&nbsp;&nbsp;Watching concerts<br>
+        &nbsp;&nbsp;&nbsp;Learning DIY crafts<br>
+        &nbsp;&nbsp;&nbsp;Crafting wool felted artwork<br>
+        &nbsp;✰Design and Technology - game<br>
+        &nbsp;✰Dream to become a game PM/curator/EP<br>
+        &nbsp;✰Always dreaming, always creating.
+        </p>
+
+        </div>
+
+        <div class="sec-b1">
+        <h2>-୨୧ New Work To Be Show ୨୧-</h2>
+        </div>
+
+        <div class="sec-b2">
+        <h2>-୨୧ My Past Work ୨୧-</h2>
+        <Ul>
+        <a href="project1p5js.html"> 💼</a> #1 Lost & Found <br><br>
+        <a href="project2p5js.html"> 🤣</a> #2 Face Generator<br><br>
+        <a href="project3p5js.html"> ⏰</a> #3 Experimental Clock<br><br>
+        <a href="project4p5js.html"> 👽</a> #4 Exquisite Corpse<br><br>
+        <a href="project5p5js.html"> 👁️</a> #5 Optical Illusion<br><br>
+        <a href="project6p5js.html"> 💽</a> #6 Data Portrait<br><br>
+        <a href="project7p5js.html"> 🕹️</a> #7 Autobiographical Game<br><br>
+        <a href="project8p5js.html"> ❤️</a> #8 Profolio<br>
+        </Ul>
+        </div>
+        
+        <div class="sec-c1">
+        <h2>-୨୧ Game Work ୨୧-</h2>
+        <a href="https://yanhuii.itch.io/"> 🎮 My Itch.io Profile 🎮</a>
+        </div>
+
+    </div>
+</div>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('h1');
+    const grid = document.querySelector('.grid-layout');
+    
+    function showContent() {
+            grid.classList.add('visible');
+            header.removeEventListener('click', showContent);
+        }
+    
+        header.addEventListener('click', showContent);
+    });
+    </script>
+
+
+
+
+</html>
