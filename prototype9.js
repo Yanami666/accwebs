@@ -11,7 +11,6 @@ function setup() {
   textFont(font);
   textSize(fontSize);
 }
-
 function draw() {
   background(0);
   fill(255);
