@@ -33,7 +33,7 @@ function mousePressed() {
   });
 }
 
-// ✅ 生成边框字母
+
 function createBorderLetters() {
   const addLetter = (char, x, y) => letters.push(new Letter(char, x, y));
 
@@ -50,7 +50,7 @@ function createBorderLetters() {
     addLetter(word[i % word.length], margin, margin + i * verticalSpacing);
 }
 
-// ✅ `Letter` 类（边框上的字母）
+
 class Letter {
   constructor(char, x, y) {
     this.char = char;
@@ -61,7 +61,7 @@ class Letter {
   }
 
   update() {
-    this.y = this.baseY + noise(this.x * 0.01, frameCount * 0.01) * 6 - 3; // ✅ 让浮动更自然
+    this.y = this.baseY + noise(this.x * 0.01, frameCount * 0.01) * 6 - 3;
     return this;
   }
 
@@ -76,7 +76,7 @@ class Letter {
   }
 }
 
-// ✅ `FloatingLetter` 类（点击后生成）
+
 class FloatingLetter {
   constructor(char) {
     this.char = char;
@@ -88,11 +88,11 @@ class FloatingLetter {
   }
 
   update() {
-    // ✅ 恢复鼠标靠近时的剧烈抖动效果
+ 
     let distance = dist(mouseX, mouseY, this.x, this.y);
     if (distance < 100) {
-      this.x += random(-5, 5); // **剧烈左右抖动**
-      this.y += random(-5, 5); // **剧烈上下抖动**
+      this.x += random(-5, 5); 
+      this.y += random(-5, 5); 
     }
 
     this.x += this.speedX;

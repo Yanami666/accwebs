@@ -3,8 +3,8 @@ let particles = [];
 let word = "Yanami";
 let scatter = false;
 let fontSize = 100;
-let bgColor = 0; // ✅ 记录背景颜色
-let colorChangeSpeed = 5; // ✅ 控制背景颜色变化速度
+let bgColor = 0; 
+let colorChangeSpeed = 5; 
 
 function preload() {
   font = loadFont('myFont.ttf'); 
@@ -26,14 +26,14 @@ function setup() {
 }
 
 function draw() {
-  background(bgColor); // ✅ 动态调整背景颜色
+  background(bgColor); 
   stroke(255); 
   noFill();
 
   let distance = dist(mouseX, mouseY, width / 2, height / 2);
   scatter = distance < 120; 
 
-  let moving = false; // ✅ 检测是否有粒子在移动
+  let moving = false; 
 
   for (let p of particles) {
     p.update();
@@ -41,15 +41,15 @@ function draw() {
     if (p.isMoving) moving = true;
   }
 
-  // ✅ **如果有文字在动，背景颜色变亮，否则恢复黑色**
+
   if (moving) {
-    bgColor = min(250, bgColor + colorChangeSpeed); // **变亮**
+    bgColor = min(250, bgColor + colorChangeSpeed);
   } else {
-    bgColor = max(0, bgColor - colorChangeSpeed); // **变黑**
+    bgColor = max(0, bgColor - colorChangeSpeed);
   }
 }
 
-// ✅ `Particle` 类（原功能不变）
+
 class Particle {
   constructor(x, y) {
     this.x = x;
